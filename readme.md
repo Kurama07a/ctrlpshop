@@ -1,44 +1,5 @@
 # CTRL-P Dashboard - Modular Electron Application
 
-A modern, modular Electron application for print shop management with enhanced code organization, maintainability, and scalability.
-
-## 🏗️ Architecture Overview
-
-This application follows a modular architecture pattern with clear separation of concerns:
-
-### 📁 Project Structure
-
-\`\`\`
-ctrlp-dashboard/
-├── src/
-│   ├── main/
-│   │   ├── modules/
-│   │   │   ├── auth/              # Authentication & session management
-│   │   │   ├── printer/           # Printer detection & management
-│   │   │   ├── job/               # Job scheduling & processing
-│   │   │   ├── storage/           # File operations & Supabase
-│   │   │   ├── websocket/         # Real-time communication
-│   │   │   ├── metrics/           # Application metrics
-│   │   │   ├── kyc/               # KYC & shop management
-│   │   │   └── updater/           # Auto-update functionality
-│   │   ├── main.js                # Application entry point
-│   │   └── constants.js           # Application constants
-│   └── renderer/
-│       ├── index.html             # Main UI template
-│       ├── main.js                # Renderer process logic
-│       └── styles.css             # Application styles
-├── package.json
-├── README.md
-└── .gitignore
-\`\`\`
-
-## 🎯 Key Features
-
-### ✅ Modular Design
-- **Separation of Concerns**: Each module handles a specific responsibility
-- **Loose Coupling**: Modules interact through well-defined interfaces
-- **Reusability**: Components designed for easy reuse and extension
-- **Maintainability**: Clear naming conventions and consistent coding style
 
 ### 🔧 Core Modules
 
