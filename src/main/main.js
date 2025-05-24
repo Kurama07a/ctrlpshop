@@ -34,6 +34,8 @@ function createMainWindow() {
     },
   });
   
+  setupIpcHandlers();
+
   mainWindow.loadFile("src/renderer/index.html");
   
   mainWindow.webContents.on('did-finish-load', () => {
@@ -99,7 +101,7 @@ app.whenReady().then(async () => {
   initializeMetrics();
   
   // Setup IPC handlers
-  setupIpcHandlers();
+  //setupIpcHandlers();
   
   // Setup auto updater
   setupAutoUpdater();

@@ -3,7 +3,6 @@ const fsPromises = require("fs").promises;
 const path = require("path");
 const { getFilePaths, FIXED_PAPER_SIZES } = require("../../constants");
 const { ipcMain } = require("electron");
-
 let printerInfo = { paperLevels: {}, discardedPrinters: [], capabilities: {} };
 let metrics = { totalPages: 0, monochromeJobs: 0, colorJobs: 0, totalIncome: 0 };
 let dailyMetrics = {};
@@ -119,8 +118,7 @@ function setupFileIpcHandlers() {
   ipcMain.handle('save-temp-file', async (_event, { name, buffer }) => {
     return await saveTempFile(name, buffer);
   });
-  ipcMain.handle('get-metrics', () => getMetrics());
-  ipcMain.handle('get-daily-metrics', () => getDailyMetrics());
+ 
   
   // Add handler for printer info
   ipcMain.handle('get-printer-info', () => getPrinterInfo());
